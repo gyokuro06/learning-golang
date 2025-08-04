@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
+const value = 20
+
 func main() {
-	i := 20
-	f := float64(i)
+	i := value
+	f := value
 	fmt.Println(i)
 	fmt.Println(f)
 }
