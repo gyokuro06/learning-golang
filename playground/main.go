@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode/utf8"
+)
 
 func main() {
-	greetings := []string{"Hello", "Hola", "नमस्कार", "こんにちは", "Привіт"}
-	fmt.Println(greetings[:2])
-	fmt.Println(greetings[1:4])
-	fmt.Println(greetings[3:])
+	messages := "Hi 👩 and 👨"
+
+	r, _ := utf8.DecodeRuneInString(messages[3:])
+	fmt.Println(string(r))
 }
