@@ -1,13 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"unicode/utf8"
-)
+import "fmt"
+
+type Employee struct {
+	firstName string
+	lastName  string
+	id        int
+}
 
 func main() {
-	messages := "Hi 👩 and 👨"
+	f := Employee{"Taro", "Yamada", 1}
+	s := Employee{
+		firstName: "Hanako",
+		lastName:  "Nagasawa",
+		id:        2,
+	}
+	t := Employee{}
+	t.firstName = "Saburo"
+	t.lastName = "Suzuki"
+	t.id = 3
 
-	r, _ := utf8.DecodeRuneInString(messages[3:])
-	fmt.Println(string(r))
+	fmt.Println(f)
+	fmt.Println(s)
+	fmt.Println(t)
 }
